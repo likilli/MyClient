@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(MyClient)
+
+set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_INSTALL_NAME_DIR ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_INTERPROCEDURAL_OPTIMIZATION OFF)
+
+if (NOT WIN32)
+    add_compile_options(
+        -Wall
+        -Wreorder
+    )
+endif ()
+
+add_subdirectory(src)

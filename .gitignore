@@ -1,0 +1,13 @@
+# dir
+.idea
+.vscode
+
+
+build
+build-vscode
+build-xcode
+cmake-build-*
+cmake-build-debug
+
+# files
+DS_Store
